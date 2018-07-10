@@ -1,6 +1,5 @@
 certifi
 chardet
 idna
-pkg-resources
 requests
 urllib3
