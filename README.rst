@@ -10,7 +10,8 @@ Unofficial Python 3 library for the `Salling Group Holidays API <https://develop
 The API supports fetching Danish holidays for a given date or range of
 dates. This library simply provides an abstraction over that API.
 
-.. note:: This library is in no way supported by Salling Group A/S nor is the author in any way affiliated with Salling Groups A/S.
+.. note::
+   This library is in no way supported by Salling Group A/S nor is the author in any way affiliated with Salling Groups A/S.
 
 Installation
 ------------
@@ -54,8 +55,8 @@ holiday:
     else:
       print('Get back to work. No holiday today.')
 
-To get a list of holidays for a given period, call the *holidays
-method* with a start and end date as a Python `datetime.date
+To get a list of holidays for a given period, call the *holidays*
+method with a start and end date as a Python `datetime.date
 object <https://docs.python.org/3/library/datetime.html#date-objects>`_. This
 method returns a Python dictionary with the holiday dates as the key
 and the name of the day as well as whether it is a holiday. For
