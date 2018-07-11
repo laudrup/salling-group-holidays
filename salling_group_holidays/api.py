@@ -14,15 +14,12 @@ class v1:
 
     def _make_request(self, params, path='/'):
         headers = {'Authorization': 'Bearer {}'.format(self._api_key)}
-        response = requests.get('{}/{}'.format(self._url, path),
+        response = requests.get('{}{}'.format(self._url, path),
                                 headers=headers,
                                 params=params)
 
-        if response.status_code != 200:
-            if 'error' in response.json():
-                raise SallingGroupHolidaysException(response.json()['error'])
-            else:
-                raise SallingGroupHolidaysException(response.text)
+        if 'error' in response.json():
+            raise SallingGroupHolidaysException(response.json()['error'])
 
         return response
 
