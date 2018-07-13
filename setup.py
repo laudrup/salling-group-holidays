@@ -8,7 +8,7 @@ def readme():
 
 setup(
     name='salling-group-holidays',
-    version='0.2',
+    version='0.3',
     author='Kasper Laudrup',
     author_email='laudrup@stacktrace.dk',
     url='https://github.com/laudrup/salling-group-holidays',
