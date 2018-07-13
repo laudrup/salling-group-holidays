@@ -1,6 +1,5 @@
 import requests
 import datetime
-import json
 
 
 class SallingGroupHolidaysException(BaseException):
@@ -18,8 +17,13 @@ class v1:
                                 headers=headers,
                                 params=params)
 
-        if 'error' in response.json():
-            raise SallingGroupHolidaysException(response.json()['error'])
+        if response.status_code != 200:
+            if 'error' in response.json():
+                raise SallingGroupHolidaysException(response.json()['error'])
+            elif 'developerMessage' in response.json():
+                raise SallingGroupHolidaysException(response.json()['developerMessage'])
+            else:
+                raise SallingGroupHolidaysException(response.text)
 
         return response
 
@@ -29,15 +33,9 @@ class v1:
 
         response = self._make_request({'date': date.isoformat()}, path='/is-holiday')
 
-        # The API returns the boolean value as a string for some reason
-        if not isinstance(response.json(), str):
+        if not isinstance(response.json(), bool):
             raise SallingGroupHolidaysException('Unexpected reply: {}'.format(response.text))
-
-        # Convert the string to a boolean value
-        bool_reply = json.loads(response.json())
-        if not isinstance(bool_reply, bool):
-            raise SallingGroupHolidaysException('Unexpected reply: {}'.format(response.text))
-        return bool_reply
+        return response.json()
 
     def holidays(self, start_date, end_date):
         if not isinstance(start_date, datetime.date):
