@@ -2,6 +2,10 @@
    :target: https://travis-ci.org/laudrup/salling-group-holidays
    :alt: Linux Build Status
 
+.. image:: https://ci.appveyor.com/api/projects/status/github/laudrup/salling-group-holidays?branch=master&svg=true
+   :target: https://ci.appveyor.com/project/laudrup/salling-group-holidays/branch/master
+   :alt: Windows Build Status
+
 Unofficial library for the Salling Group Holidays API
 =====================================================
 
