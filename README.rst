@@ -1,6 +1,6 @@
 .. image:: https://travis-ci.org/laudrup/salling-group-holidays.svg?master
    :target: https://travis-ci.org/laudrup/salling-group-holidays
-   :alt: Linux Build Status
+   :alt: Linux and Max OSX Build Status
 
 .. image:: https://ci.appveyor.com/api/projects/status/github/laudrup/salling-group-holidays?branch=master&svg=true
    :target: https://ci.appveyor.com/project/laudrup/salling-group-holidays/branch/master
