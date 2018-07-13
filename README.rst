@@ -43,7 +43,7 @@ Once you have received your key, you can start using this library. Usage is fair
     v1 = salling_group_holidays.v1(API_KEY)
 
 To see if a given date is a holiday, use a Python `datetime.date
-object <https://docs.python.org/3/library/datetime.html#date-objects>`_. and
+object <https://docs.python.org/3/library/datetime.html#date-objects>`__. and
 call the *is_holiday* method. For example, to see if today is a Danish
 holiday:
 
@@ -61,7 +61,7 @@ holiday:
 
 To get a list of holidays for a given period, call the *holidays*
 method with a start and end date as a Python `datetime.date
-object <https://docs.python.org/3/library/datetime.html#date-objects>`_. This
+object <https://docs.python.org/3/library/datetime.html#date-objects>`__. This
 method returns a Python dictionary with the holiday dates as the key
 and the name of the day as well as whether it is a holiday. For
 example to get the list of Danish holidays in December 2018:
