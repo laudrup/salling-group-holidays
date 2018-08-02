@@ -6,4 +6,6 @@ python:
 install:
   - pip install -r requirements.txt
 script:
-  - pytest
+  - coverage run --source salling_group_holidays setup.py test
+after_success:
+  - coveralls
