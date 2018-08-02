@@ -6,6 +6,11 @@
    :target: https://ci.appveyor.com/project/laudrup/salling-group-holidays/branch/master
    :alt: Windows Build Status
 
+.. image:: https://coveralls.io/repos/github/laudrup/salling-group-holidays/badge.svg?branch=master
+   :target: https://coveralls.io/github/laudrup/salling-group-holidays?branch=master
+   :alt: Code Coverage
+
+
 Unofficial library for the Salling Group Holidays API
 =====================================================
 
