@@ -9,7 +9,7 @@ class SallingGroupHolidaysException(BaseException):
 class v1:
     def __init__(self, api_key):
         self._api_key = api_key
-        self._url = 'https://api.dansksupermarked.dk/v1/holidays'
+        self._url = 'https://api.sallinggroup.com/v1/holidays'
 
     def _make_request(self, params, path='/'):
         headers = {'Authorization': 'Bearer {}'.format(self._api_key)}
